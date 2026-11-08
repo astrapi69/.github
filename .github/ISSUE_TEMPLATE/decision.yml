@@ -1,0 +1,52 @@
+name: Decision
+description: A choice for the maintainer, such as a change of a documented contract, a file format or an architectural decision.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Built like rule AG-098 and after MADR 4.0.0 (https://adr.github.io/madr/: Context and Problem Statement, Considered Options, Decision Outcome). What an issue holds is set by rule AG-114 of https://github.com/astrapi69/astrapi69/blob/main/rules/core/git-and-prs.md.
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and problem
+      description: What has to be decided, and why now.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: What was measured or reproduced, with the version or commit, and who is affected (callers, persisted data).
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Considered options
+      description: Numbered options, each with its pros and cons and what it changes for callers.
+      value: |
+        1.
+        2.
+    validations:
+      required: true
+  - type: textarea
+    id: recommendation
+    attributes:
+      label: Recommendation
+      description: '"Chosen option: N, because ..." with the reason.'
+    validations:
+      required: true
+  - type: textarea
+    id: best-practice
+    attributes:
+      label: Best practice
+      description: The precedents behind the options, with their sources, such as a JDK contract, Apache Commons, OWASP or a specification.
+    validations:
+      required: true
+  - type: textarea
+    id: consequences
+    attributes:
+      label: Consequences
+      description: What follows from the recommended option (migration, CHANGELOG note, major release).
+    validations:
+      required: false

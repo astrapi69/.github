@@ -1,0 +1,43 @@
+name: Improvement
+description: Something that works as documented but could be better, or is missing.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        What an issue holds is set by rule AG-114 of https://github.com/astrapi69/astrapi69/blob/main/rules/core/git-and-prs.md. Numbered options belong here only when there is a real choice; a change that changes a documented contract is a Decision.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is missing or could be better, and for whom.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: A measurement, an example or a reproduction that shows it, with the version or commit.
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: Proposed change
+      description: What to change, and how it is tested.
+    validations:
+      required: true
+  - type: textarea
+    id: best-practice
+    attributes:
+      label: Best practice
+      description: The precedent behind the change, with its source, such as a JDK contract, Apache Commons, OWASP or a specification.
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Options
+      description: 'Only when there is a real choice. Numbered options, each with its pros and cons, then "Recommendation: option N, because ...".'
+    validations:
+      required: false

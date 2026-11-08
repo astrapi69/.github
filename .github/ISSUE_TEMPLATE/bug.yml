@@ -1,0 +1,45 @@
+name: Bug
+description: The code breaks its name, its Javadoc or another documented promise.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A security vulnerability is reported privately (the repository's Security tab, "Report a vulnerability"), never in an issue.
+        What an issue holds is set by rule AG-114 of https://github.com/astrapi69/astrapi69/blob/main/rules/core/git-and-prs.md.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What the code does, and which promise it breaks (its name, its Javadoc, the contract of the interface it implements), with file and line where known.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: A test or a few lines that show it, the result they give, and the version or commit they ran on.
+      render: java
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: Proposed fix
+      description: What the code should do instead, and how the fix is tested (a test that pins today's behaviour first, then the fix).
+    validations:
+      required: true
+  - type: textarea
+    id: best-practice
+    attributes:
+      label: Best practice
+      description: The precedent behind the fix, with its source, such as a JDK contract (class, method and the quoted sentence), Apache Commons, OWASP or a specification.
+    validations:
+      required: true
+  - type: textarea
+    id: callers
+    attributes:
+      label: Callers affected
+      description: Who calls the code, and what they notice after the fix (for the CHANGELOG note).
+    validations:
+      required: false
