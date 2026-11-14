@@ -5,12 +5,19 @@ body:
   - type: markdown
     attributes:
       value: |
-        What an issue holds is set by rule AG-114 of https://github.com/astrapi69/astrapi69/blob/main/rules/core/git-and-prs.md. Numbered options belong here only when there is a real choice; a change that changes a documented contract is a Decision.
+        What an issue holds is set by rules AG-114 and AG-116 of https://github.com/astrapi69/astrapi69/blob/main/rules/core/git-and-prs.md. Numbered options belong here only when there is a real choice; a change that changes a documented contract is a Decision.
   - type: textarea
     id: problem
     attributes:
       label: Problem
       description: What is missing or could be better, and for whom.
+    validations:
+      required: true
+  - type: textarea
+    id: code-today
+    attributes:
+      label: Code today
+      description: The code as it is today, with file and line on a named commit (AG-116); for something missing, the place where it would go.
     validations:
       required: true
   - type: textarea
