@@ -6,7 +6,7 @@ body:
     attributes:
       value: |
         A security vulnerability is reported privately (the repository's Security tab, "Report a vulnerability"), never in an issue.
-        What an issue holds is set by rule AG-114 of https://github.com/astrapi69/astrapi69/blob/main/rules/core/git-and-prs.md.
+        What an issue holds is set by rules AG-114 and AG-116 of https://github.com/astrapi69/astrapi69/blob/main/rules/core/git-and-prs.md.
   - type: textarea
     id: problem
     attributes:
@@ -15,11 +15,15 @@ body:
     validations:
       required: true
   - type: textarea
-    id: reproduction
+    id: proof-of-concept
     attributes:
-      label: Reproduction
-      description: A test or a few lines that show it, the result they give, and the version or commit they ran on.
-      render: java
+      label: Proof of concept
+      description: >-
+        A test, a program or a command with its output, on a named commit, that anyone can run and that shows the
+        wrong behaviour next to the expected one (AG-116). A description or a reference to a line is not a proof of
+        concept. A security finding does not belong here: its proof of concept goes into the private report, never
+        into an issue. A defect that cannot be reproduced: the run with a log excerpt, and the sentence that the proof
+        of concept is missing.
     validations:
       required: true
   - type: textarea

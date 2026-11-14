@@ -5,4 +5,4 @@ contact_links:
     about: Use the repository's Security tab ("Report a vulnerability"), never a public issue.
   - name: How issues are written in these repositories
     url: https://github.com/astrapi69/astrapi69/blob/main/rules/core/git-and-prs.md
-    about: Rule AG-114 - problem, evidence, proposed fix and its best practice with a source; options only for a real choice.
+    about: Rules AG-114 and AG-116 - problem, proof of concept, proposed fix and its best practice with a source; options only for a real choice.
